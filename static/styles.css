@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#drop-area {
+    padding: 20px;
+    border: 2px dashed #007bff;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#drop-area.highlight {
+    background-color: #e9ecef;
+    border-color: #0056b3;
+}
+
+#drop-area p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}

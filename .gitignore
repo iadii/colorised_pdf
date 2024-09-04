@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Uploaded files
+uploads/
+output/
+
+# Packages
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variable files
+.env
+.env.local
+*.env
