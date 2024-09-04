@@ -31,14 +31,17 @@ def convert_pdf(input_pdf, output_pdf):
     # Open the input PDF
     pdf_document = fitz.open(input_pdf)
     
+    # Define the new background color (RGB normalized)
+    background_color = (47/255, 45/255, 46/255)  # Converted to normalized RGB values
+
     # Iterate over each page
     for page_num in range(pdf_document.page_count):
         page = pdf_document.load_page(page_num)
         text_instances = page.get_text("dict")['blocks']
 
-        # Fill page background with black
+        # Fill page background with the new color
         page_rect = page.rect
-        page.draw_rect(page_rect, color=(0, 0, 0), fill=(0, 0, 0))
+        page.draw_rect(page_rect, color=background_color, fill=background_color)
         
         # Iterate over text instances
         for block in text_instances:
@@ -60,6 +63,7 @@ def convert_pdf(input_pdf, output_pdf):
 
     # Save the output PDF
     pdf_document.save(output_pdf)
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
